@@ -1,1 +1,1 @@
-Election UI5 File browser
+Electron UI5 File browser
