@@ -1,0 +1,30 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+	controllerName="app.controller.app">
+	<SplitApp id="idAppControl" showHeader="false" mode="StretchCompressMode">
+		<masterPages>
+			<Page title="Files">
+				<List items="{path:'Files>/',sorter:{path:''}}" itemPress="drilldown">
+					<headerToolbar>
+						<Toolbar>
+							<Button press="back" icon="sap-icon://nav-back"/>
+						</Toolbar>
+					</headerToolbar>
+					<StandardListItem
+						title="{Files>}"
+						icon="{path:'Files>',formatter:'.getIcon'}"
+						iconDensityAware="false"
+						iconInset="false" 
+						type="Active"/>
+				</List>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page title="App">
+				<Text text="{File>/content}"/>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
